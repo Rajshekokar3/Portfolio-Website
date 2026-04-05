@@ -1,235 +1,265 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Raj Shekokar | Financial Data Analyst</title>
-    <link rel="stylesheet" href="/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  </head>
-  <body>
-    <!-- Background Blobs -->
-    <div class="bg-blobs">
-      <div class="blob blob-1"></div>
-      <div class="blob blob-2"></div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Raj Shekokar | Financial Data Analyst</title>
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+  <!-- Background Blobs -->
+  <div class="bg-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="container nav-container">
+      <a href="#" class="logo">Raj<span>Portfolio</span></a>
+      <ul class="nav-links">
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#dashboards">Dashboards</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <button id="themeToggle" class="theme-toggle">
+        <i class="fa-solid fa-moon"></i>
+      </button>
     </div>
+  </nav>
 
-    <!-- Navigation -->
-    <nav id="navbar">
-      <div class="container nav-container">
-        <a href="#" class="logo">Raj<span>.Data</span></a>
-        <ul class="nav-links">
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#dashboards">Dashboards</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#insights">Insights</a></li>
-          <li><a href="#about">About</a></li>
-        </ul>
-        <button id="themeToggle" class="theme-toggle">
-          <i class="fa-solid fa-moon"></i>
-        </button>
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <span class="subtitle">Financial Data Analyst | MBA Finance</span>
+        <h1>Hello, my name is <br>Raj Shekokar</h1>
+        <p>I analyze financial data to identify risks, growth opportunities, and actionable business insights. Combining
+          Data Science skills with Finance knowledge.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="https://www.linkedin.com/in/rajshekokar/" target="_blank" class="btn btn-secondary">
+            <i class="fa-brands fa-linkedin"></i> LinkedIn
+          </a>
+        </div>
       </div>
-    </nav>
+      <div class="hero-image-wrapper">
+        <div class="hero-backdrop"></div>
+        <img src="/assets/images/profile.png" alt="Raj Shekokar" class="hero-image" />
+      </div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section id="hero" class="hero">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <span class="subtitle">Financial Data Analyst | MBA Finance</span>
-          <h1>Hello, my name is <br>Raj Shekokar</h1>
-          <p>I analyze financial data to identify risks, growth opportunities, and actionable business insights. Combining Data Science skills with Finance knowledge.</p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="https://www.linkedin.com/in/rajshekokar/" target="_blank" class="btn btn-secondary">
-              <i class="fa-brands fa-linkedin"></i> LinkedIn
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="container">
+      <h2 class="section-title">My <span>Data Projects</span></h2>
+
+      <div class="filter-tabs" id="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="excel">Excel</button>
+        <button class="filter-btn" data-filter="python">Python</button>
+        <button class="filter-btn" data-filter="powerbi">Power BI</button>
+      </div>
+
+      <div class="projects-grid" id="projects-grid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Excel Modal -->
+  <div class="modal-overlay" id="excelModal">
+    <div class="modal-content">
+      <button class="close-modal" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
+      <h3>Excel Viewer Preview</h3>
+      <p style="margin-bottom: 1rem; color: var(--text-secondary);">Interactive view of the financial data model.</p>
+      <div class="iframe-container" id="iframeContainer">
+        <!-- iframe injected here by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Dashboards Section -->
+  <section id="dashboards">
+    <div class="container">
+      <h2 class="section-title">Interactive <span>Dashboards</span></h2>
+      <div class="projects-grid">
+        <div class="dashboard-preview">
+          <img src="/assets/images/project_dashboard.png" alt="Financial Dashboard preview">
+        </div>
+        <!-- More dashboards can go here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title">Core <span>Expertise</span></h2>
+      <div class="skills-container">
+        <!-- Technical Skills -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-code"></i> Technical Skills</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-name"><span>Python (Pandas, NumPy)</span> <span>90%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name"><span>Advanced Excel</span> <span>95%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 95%;"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name"><span>Power BI</span> <span>85%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name"><span>SQL</span> <span>80%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Financial Skills -->
+        <div class="skill-category">
+          <h3><i class="fa-solid fa-chart-line"></i> Financial Skills</h3>
+          <ul class="skill-list">
+            <li class="skill-item">
+              <div class="skill-name"><span>Financial Modeling</span> <span>90%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name"><span>Ratio Analysis</span> <span>85%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 85%;"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name"><span>Forecasting</span> <span>80%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name"><span>Valuation Basics</span> <span>75%</span></div>
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: 75%;"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Insights / Blog -->
+  <section id="insights">
+    <div class="container">
+      <h2 class="section-title">Case Studies & <span>Insights</span></h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3 class="project-title">Why Company Profits Decline</h3>
+          <p class="project-desc">An deep dive into macroeconomic factors and operational inefficiencies affecting net
+            margins...</p>
+          <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 600;">Read More <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">EBITDA vs Net Profit Analysis</h3>
+          <p class="project-desc">Understanding the real cash-flow potential of a firm beyond the bottom line accounting
+            metrics...</p>
+          <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 600;">Read More <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="project-card">
+          <h3 class="project-title">Top Ratios Investors Need to Track</h3>
+          <p class="project-desc">Evaluating purely from a liquidity and solvency perspective to mitigate default
+            risks...</p>
+          <a href="#" style="color: var(--accent); text-decoration: none; font-weight: 600;">Read More <i
+              class="fa-solid fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Resume Section -->
+  <section id="about">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2 class="section-title" style="text-align: left;">About <span>Me</span></h2>
+          <p>I am an <strong>MBA Finance student</strong> with a strong technical background in <strong>Data Science &
+              Python</strong>.</p>
+          <p>My goal is to secure a Financial Analyst role where I can blend my expertise in data wrangling and
+            automation with sound financial acumen.</p>
+          <p>I specialize in building automated dashboards, generating actionable insights from large datasets, and
+            performing robust fundamental analysis.</p>
+
+          <div
+            style="margin-top: 2rem; background: var(--surface); padding: 2rem; border-radius: var(--border-radius-sm); border: 1px solid var(--border-color);">
+            <h3>Resume</h3>
+            <p>Download my full CV to see detailed education and professional experiences.</p>
+            <br>
+            <a href="/assets/resume/Raj_Shekokar_Resume.pdf" class="btn btn-primary" download>
+              <i class="fa-solid fa-download"></i> Download Resume (PDF)
             </a>
           </div>
         </div>
-        <div class="hero-image-wrapper">
-          <div class="hero-backdrop"></div>
-          <img src="/assets/images/profile.png" alt="Raj Shekokar" class="hero-image" />
-        </div>
-      </div>
-    </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">My <span>Data Projects</span></h2>
-        
-        <div class="filter-tabs" id="project-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="excel">Excel</button>
-          <button class="filter-btn" data-filter="python">Python</button>
-          <button class="filter-btn" data-filter="powerbi">Power BI</button>
-        </div>
-
-        <div class="projects-grid" id="projects-grid">
-          <!-- Populated by JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Interactive Excel Modal -->
-    <div class="modal-overlay" id="excelModal">
-      <div class="modal-content">
-        <button class="close-modal" id="closeModal"><i class="fa-solid fa-xmark"></i></button>
-        <h3>Excel Viewer Preview</h3>
-        <p style="margin-bottom: 1rem; color: var(--text-secondary);">Interactive view of the financial data model.</p>
-        <div class="iframe-container" id="iframeContainer">
-          <!-- iframe injected here by JS -->
+        <div id="contact" class="contact-form">
+          <h2 style="margin-bottom: 2rem;">Get in <span>Touch</span></h2>
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
+            <a href="mailto:raj@example.com" class="contact-card">
+              <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+              <div>
+                <strong>Email Me</strong>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">raj@example.com</div>
+              </div>
+            </a>
+            <a href="https://github.com/Rajshekokar3" target="_blank" class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+              <div>
+                <strong>GitHub</strong>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">Rajshekokar3</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/rajshekokar/" target="_blank" class="contact-card">
+              <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+              <div>
+                <strong>LinkedIn</strong>
+                <div style="color: var(--text-secondary); font-size: 0.9rem;">/in/rajshekokar</div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <!-- Dashboards Section -->
-    <section id="dashboards">
-      <div class="container">
-        <h2 class="section-title">Interactive <span>Dashboards</span></h2>
-        <div class="projects-grid">
-          <div class="dashboard-preview">
-            <img src="/assets/images/project_dashboard.png" alt="Financial Dashboard preview">
-          </div>
-          <!-- More dashboards can go here -->
-        </div>
-      </div>
-    </section>
+  <footer>
+    <div class="container">
+      <p>&copy; 2026 Raj Shekokar. Crafted with data & design.</p>
+    </div>
+  </footer>
 
-    <!-- Skills Section -->
-    <section id="skills">
-      <div class="container">
-        <h2 class="section-title">Core <span>Expertise</span></h2>
-        <div class="skills-container">
-          <!-- Technical Skills -->
-          <div class="skill-category">
-            <h3><i class="fa-solid fa-code"></i> Technical Skills</h3>
-            <ul class="skill-list">
-              <li class="skill-item">
-                <div class="skill-name"><span>Python (Pandas, NumPy)</span> <span>90%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name"><span>Advanced Excel</span> <span>95%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 95%;"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name"><span>Power BI</span> <span>85%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name"><span>SQL</span> <span>80%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-              </li>
-            </ul>
-          </div>
+  <script type="module" src="/main.js"></script>
+</body>
 
-          <!-- Financial Skills -->
-          <div class="skill-category">
-            <h3><i class="fa-solid fa-chart-line"></i> Financial Skills</h3>
-            <ul class="skill-list">
-              <li class="skill-item">
-                <div class="skill-name"><span>Financial Modeling</span> <span>90%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 90%;"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name"><span>Ratio Analysis</span> <span>85%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 85%;"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name"><span>Forecasting</span> <span>80%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 80%;"></div></div>
-              </li>
-              <li class="skill-item">
-                <div class="skill-name"><span>Valuation Basics</span> <span>75%</span></div>
-                <div class="skill-bar"><div class="skill-progress" style="width: 75%;"></div></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Insights / Blog -->
-    <section id="insights">
-      <div class="container">
-        <h2 class="section-title">Case Studies & <span>Insights</span></h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3 class="project-title">Why Company Profits Decline</h3>
-            <p class="project-desc">An deep dive into macroeconomic factors and operational inefficiencies affecting net margins...</p>
-            <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="project-card">
-            <h3 class="project-title">EBITDA vs Net Profit Analysis</h3>
-            <p class="project-desc">Understanding the real cash-flow potential of a firm beyond the bottom line accounting metrics...</p>
-            <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-          <div class="project-card">
-            <h3 class="project-title">Top Ratios Investors Need to Track</h3>
-            <p class="project-desc">Evaluating purely from a liquidity and solvency perspective to mitigate default risks...</p>
-            <a href="#" style="color: var(--accent-color); text-decoration: none; font-weight: 600;">Read More <i class="fa-solid fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- About & Resume Section -->
-    <section id="about">
-      <div class="container">
-        <div class="contact-grid">
-          <div class="contact-info">
-            <h2 class="section-title" style="text-align: left;">About <span>Me</span></h2>
-            <p>I am an <strong>MBA Finance student</strong> with a strong technical background in <strong>Data Science & Python</strong>.</p>
-            <p>My goal is to secure a Financial Analyst role where I can blend my expertise in data wrangling and automation with sound financial acumen.</p>
-            <p>I specialize in building automated dashboards, generating actionable insights from large datasets, and performing robust fundamental analysis.</p>
-            
-            <div style="margin-top: 2rem; background: var(--surface-color); padding: 2rem; border-radius: var(--border-radius-sm); border: 1px solid var(--border-color);">
-              <h3>Resume</h3>
-              <p>Download my full CV to see detailed education and professional experiences.</p>
-              <br>
-              <a href="/assets/resume/Raj_Shekokar_Resume.pdf" class="btn btn-primary" download>
-                <i class="fa-solid fa-download"></i> Download Resume (PDF)
-              </a>
-            </div>
-          </div>
-
-          <div id="contact" class="contact-form">
-            <h2 style="margin-bottom: 2rem;">Get in <span>Touch</span></h2>
-            <div style="display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2rem;">
-              <a href="mailto:raj@example.com" class="contact-card">
-                <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                <div>
-                  <strong>Email Me</strong>
-                  <div style="color: var(--text-secondary); font-size: 0.9rem;">raj@example.com</div>
-                </div>
-              </a>
-              <a href="https://github.com/Rajshekokar3" target="_blank" class="contact-card">
-                <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
-                <div>
-                  <strong>GitHub</strong>
-                  <div style="color: var(--text-secondary); font-size: 0.9rem;">Rajshekokar3</div>
-                </div>
-              </a>
-              <a href="https://www.linkedin.com/in/rajshekokar/" target="_blank" class="contact-card">
-                <div class="contact-icon"><i class="fa-brands fa-linkedin-in"></i></div>
-                <div>
-                  <strong>LinkedIn</strong>
-                  <div style="color: var(--text-secondary); font-size: 0.9rem;">/in/rajshekokar</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <p>&copy; 2026 Raj Shekokar. Crafted with data & design.</p>
-      </div>
-    </footer>
-
-    <script type="module" src="/main.js"></script>
-  </body>
 </html>
