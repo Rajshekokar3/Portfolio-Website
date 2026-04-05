@@ -5,7 +5,7 @@
   /* Soft Blue (main brand) */
   --secondary: #6FCF97;
   /* Mint Green (fresh feel) */
-  --accent: #F2C94C;
+  --accent: #0a0904;
   /* Soft Yellow (less harsh than before) */
   --background: #F9FAFB;
   /* Clean Off White */
@@ -41,7 +41,7 @@
   /* Softer blue for dark */
   --secondary: #86EFAC;
   /* Light mint */
-  --accent: #FDE68A;
+  --accent: #eaeaea;
   /* Soft warm highlight */
 
   --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.25);
