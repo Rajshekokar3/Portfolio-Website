@@ -49,6 +49,34 @@
   --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
+body {
+  background: var(--background);
+  color: var(--text);
+}
+
+.card {
+  background: var(--surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border-radius: var(--border-radius-sm);
+  transition: var(--transition);
+}
+
+button:hover {
+  background: var(--secondary);
+}
+
 * {
   margin: 0;
   padding: 0;
