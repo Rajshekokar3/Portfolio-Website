@@ -1,18 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-  --primary: #5B4B49;
-  --secondary: #FFD633;
-  --accent: #0c0a02;
-  --background: #DDDAD0;
-  --text: #2C2C2C;
+  --primary: #4A90E2;
+  /* Soft Blue (main brand) */
+  --secondary: #6FCF97;
+  /* Mint Green (fresh feel) */
+  --accent: #F2C94C;
+  /* Soft Yellow (less harsh than before) */
+  --background: #F9FAFB;
+  /* Clean Off White */
+  --text: #1F2937;
+  /* Deep Charcoal */
 
-  --surface: #ffffff;
+  --surface: #FFFFFF;
+  /* Cards */
   --text-secondary: #6B7280;
+  /* Sub text */
   --border-color: #E5E7EB;
+  /* Light border */
 
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.02);
-  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.03);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.08);
 
   --border-radius: 20px;
@@ -21,14 +29,24 @@
 }
 
 [data-theme="dark"] {
-  --background: #111827;
-  --surface: #1F2937;
+  --background: #0F172A;
+  /* Deep navy */
+  --surface: #1E293B;
+  /* Card background */
   --text: #F9FAFB;
   --text-secondary: #9CA3AF;
-  --border-color: #374151;
-  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.2);
-  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.4);
+  --border-color: #334155;
+
+  --primary: #60A5FA;
+  /* Softer blue for dark */
+  --secondary: #86EFAC;
+  /* Light mint */
+  --accent: #FDE68A;
+  /* Soft warm highlight */
+
+  --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 10px 25px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 20px 40px rgba(0, 0, 0, 0.45);
 }
 
 * {
